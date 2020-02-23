@@ -1,0 +1,29 @@
+{
+  "name": "armachovsk-bot",
+  "version": "0.1.0",
+  "description": "Armachovsk Bot",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Reidond/armachovsk-bot.git"
+  },
+  "engines": {
+    "node": "12.16.1"
+  },
+  "keywords": [],
+  "author": "Reidond",
+  "license": "GPLv3",
+  "bugs": {
+    "url": "https://github.com/Reidond/armachovsk-bot/issues"
+  },
+  "homepage": "https://github.com/Reidond/armachovsk-bot#readme",
+  "dependencies": {
+    "discord.js": "^11.5.1",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1"
+  }
+}
