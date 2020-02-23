@@ -13,10 +13,10 @@ client.on("ready", () => {
 });
 
 client.on("message", async msg => {
-  if (msg.content.includes("мусор")) {
+  if (msg.content.includes("мусор") || msg.author.id === "298062589261512704") {
     try {
       await msg.delete();
-      msg.author.send(`( ͡° ͜ʖ ͡°)╭∩╮`);
+      msg.reply(`( ͡° ͜ʖ ͡°)╭∩╮`);
       console.info(`Message by ${msg.author.tag} was deleted`);
     } catch (e) {
       console.error(e.message);
