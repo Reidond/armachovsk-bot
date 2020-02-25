@@ -13,7 +13,7 @@ client.on("ready", () => {
 });
 
 client.on("message", async msg => {
-  if (msg.content.includes("мусор") || msg.author.id === "298062589261512704") {
+  if (msg.content.includes("мусор") && msg.author.id === "298062589261512704") {
     try {
       await msg.delete();
       msg.reply(`( ͡° ͜ʖ ͡°)╭∩╮`);
