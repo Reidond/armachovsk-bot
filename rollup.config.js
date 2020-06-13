@@ -20,7 +20,8 @@ export default [
     plugins: [
       typescript({ module: "CommonJS" }),
       commonjs({ extensions: [".js", ".ts"] }), // the ".ts" extension is required
-      dev && run(),
+      dev &&
+        run({ execArgv: ["-r", "source-map-support/register", "--inspect"] }),
     ],
   },
 ];
