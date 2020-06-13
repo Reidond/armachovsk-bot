@@ -2,6 +2,8 @@ import Discord from "discord.js";
 import dotenv from "dotenv";
 import { BOT_PLAYGROUND } from "./constants";
 import {
+  messageHandlersDbg,
+  messageHandlersProd,
   executeMessageHandlers,
   IMessageHandlersContext,
 } from "./messageHandlers";
@@ -20,7 +22,9 @@ client.on("message", async (msg) => {
     msg,
   };
   if (dev && msg.channel.id === BOT_PLAYGROUND) {
-    executeMessageHandlers(messageHandlersContext);
+    executeMessageHandlers(messageHandlersDbg, messageHandlersContext);
+  } else {
+    executeMessageHandlers(messageHandlersProd, messageHandlersContext);
   }
 });
 

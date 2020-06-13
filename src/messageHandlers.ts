@@ -8,12 +8,22 @@ interface IMessageHandlersContext {
   msg: Message;
 }
 
-const messageHandlers: MessageHandlers = new Map();
-messageHandlers.set(REIDOND, reidondMessageHandler);
-messageHandlers.set(RIEPER, rieperMessageHandler);
+const messageHandlersDbg: MessageHandlers = new Map();
+messageHandlersDbg.set(REIDOND, reidondMessageHandler);
 
-function executeMessageHandlers(context: IMessageHandlersContext) {
+const messageHandlersProd: MessageHandlers = new Map();
+messageHandlersProd.set(RIEPER, rieperMessageHandler);
+
+function executeMessageHandlers(
+  messageHandlers: MessageHandlers,
+  context: IMessageHandlersContext
+) {
   messageHandlers.get(context.msg.author.id).call(context);
 }
 
-export { messageHandlers, executeMessageHandlers, IMessageHandlersContext };
+export {
+  messageHandlersDbg,
+  messageHandlersProd,
+  executeMessageHandlers,
+  IMessageHandlersContext,
+};
