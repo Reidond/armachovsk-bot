@@ -37,4 +37,5 @@ jobs:
           port: ${{ secrets.PORT }}
           script: |
             cd /opt/armachovsk-bot
-            /root/.nvm/versions/node/v14.4.0/bin/pm2 start dist/index.cjs
+            source /root/.bashrc
+            pm2 start dist/index.cjs
