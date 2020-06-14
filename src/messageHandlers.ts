@@ -12,7 +12,8 @@ const messageHandlersDbg: MessageHandlers = new Map();
 messageHandlersDbg.set(REIDOND, reidondMessageHandler);
 
 const messageHandlersProd: MessageHandlers = new Map();
-messageHandlersProd.set(RIEPER, rieperMessageHandler);
+// annoying
+// messageHandlersProd.set(RIEPER, rieperMessageHandler);
 
 function executeMessageHandlers(
   messageHandlers: MessageHandlers,
